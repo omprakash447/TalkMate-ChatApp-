@@ -23,7 +23,7 @@ app.use(cors({
 app.use(express.json()); // Middleware to parse JSON requests
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/chatapp') // Connecting to MongoDB database "chatapp"
+mongoose.connect('mongodb+srv://supriyadhal50:n6Ef2fti2ezb99f0@cluster0.pgn4a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/SHC') // Connecting to MongoDB database "chatapp"
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
