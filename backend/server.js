@@ -159,6 +159,21 @@ io.on('connection', (socket) => {
   });
 });
 
+
+
+//deployment
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
+
+
+
+
+
+
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // Start the HTTP server on specified port
